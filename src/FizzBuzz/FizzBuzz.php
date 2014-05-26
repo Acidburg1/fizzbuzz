@@ -5,7 +5,7 @@ namespace FizzBuzz;
 class FizzBuzz {
 
     public function devuelve($param0) {
-        return 1;
+        return $param0;
     }
 
     //put your code here
