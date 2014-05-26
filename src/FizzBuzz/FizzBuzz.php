@@ -4,8 +4,11 @@ namespace FizzBuzz;
 
 class FizzBuzz {
 
-    public function devuelve($param0) {
-        return $param0;
+    public function devuelve($numero) {
+        if (3 === $numero) {
+            return 'Fizz';
+        }
+        return $numero;
     }
 
     //put your code here

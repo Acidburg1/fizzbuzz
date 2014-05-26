@@ -25,4 +25,8 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals(2, $this->fizzBuzz->devuelve(2));
     }
 
+    public function testElTercerElementoEsFizz() {
+        $this->assertEquals('Fizz', $this->fizzBuzz->devuelve(3));
+    }
+
 }
