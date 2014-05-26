@@ -6,18 +6,23 @@ use FizzBuzz\FizzBuzz;
 
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase {
 
+    private $fizzBuzz;
+
+    protected function setUp() {
+        parent::setUp();
+        $this->fizzBuzz = new FizzBuzz();
+    }
+
     public function testSetup() {
         $this->assertTrue(true);
     }
 
     public function testElPrimerElementoEs1() {
-        $fizzBuzz = new FizzBuzz();
-        $this->assertEquals(1, $fizzBuzz->devuelve(1));
+        $this->assertEquals(1, $this->fizzBuzz->devuelve(1));
     }
 
     public function testElSegundoElementoEs2() {
-        $fizzBuzz = new FizzBuzz();
-        $this->assertEquals(2, $fizzBuzz->devuelve(2));
+        $this->assertEquals(2, $this->fizzBuzz->devuelve(2));
     }
 
 }
