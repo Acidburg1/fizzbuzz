@@ -5,9 +5,18 @@ namespace FizzBuzz;
 class FizzBuzz {
 
     public function devuelve($numero) {
-        if (3 === $numero) {
-            return 'Fizz';
+        $devuelve;
+
+        if ($numero % 3 == 0) {
+            $devuelve = "Fizz";
         }
+        if ($numero % 5 == 0) {
+            $devuelve = $devuelve . "Buzz";
+        }
+        if (!empty($devuelve)) {
+            return $devuelve;
+        }
+
         return $numero;
     }
 
