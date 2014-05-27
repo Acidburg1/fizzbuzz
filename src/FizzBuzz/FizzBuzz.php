@@ -7,25 +7,15 @@ class FizzBuzz {
     public function devuelve($numero) {
 
         $devuelve = "";
-        $numero2 = '' . $numero;
 
 
-//|| $this->contieneNumero($numero2, '3') !== false))
         if ($this->esMultipleOcontieneNumero($numero, '3')) {
             $devuelve = $devuelve . "Fizz";
         }
         if ($this->esMultipleOcontieneNumero($numero, '5')) {
             $devuelve = $devuelve . "Buzz";
         }
-//        if (($this->esMultiple($numero, '3') == true) ||
-//                ($this->contieneNumero($numero2, '3') !== false)) {
-//
-//        }
-//        }
-//        if (($this->esMultiple($numero, '5') == true)
-//                || ($this->contieneNumero($numero2, '5') !== false)) {
-//            $devuelve = $devuelve . "Buzz";
-//        }
+
         if (!empty($devuelve)) {
             $numero = $devuelve;
         }
@@ -34,31 +24,19 @@ class FizzBuzz {
     }
 
     public function esMultipleOcontieneNumero($numero, $numeroContieneOMultiple) {
-        $numero2 = '' . $numero;
-        if ($this->esMultiple($numero, $numeroContieneOMultiple)) {
-            return true;
-        }
-        if ($this->contieneNumero($numero2, $numeroContieneOMultiple)) {
-            return true;
-        }
-        return false;
+        return $this->esMultiple($numero, $numeroContieneOMultiple) ||
+                $this->contieneNumero($numero, $numeroContieneOMultiple);
     }
 
     public function contieneNumero($numero, $numeroQueBuscar) {
+        $numero2 = '' . $numero;
 
-        return strpos($numero, $numeroQueBuscar) !== false;
+        return strpos($numero2, $numeroQueBuscar) !== false;
     }
 
-//
-////
     public function esMultiple($numero, $decualEsMultiple) {
         $resultado = $numero % $decualEsMultiple;
-        if ($resultado == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return $resultado == 0;
     }
 
-//put your code here
 }
