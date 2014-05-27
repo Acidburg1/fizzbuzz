@@ -29,6 +29,10 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals('Fizz', $this->fizzBuzz->devuelve(3));
     }
 
+    public function testElQuintoElementoEsBuzz() {
+        $this->assertEquals('Buzz', $this->fizzBuzz->devuelve(5));
+    }
+
     public function testElQuinceaboElementoEsFizz() {
         $this->assertEquals('FizzBuzz', $this->fizzBuzz->devuelve(15));
     }
