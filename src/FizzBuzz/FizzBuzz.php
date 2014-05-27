@@ -23,18 +23,18 @@ class FizzBuzz {
         return $numero;
     }
 
-    public function esMultipleOcontieneNumero($numero, $numeroContieneOMultiple) {
+    private function esMultipleOcontieneNumero($numero, $numeroContieneOMultiple) {
         return $this->esMultiple($numero, $numeroContieneOMultiple) ||
                 $this->contieneNumero($numero, $numeroContieneOMultiple);
     }
 
-    public function contieneNumero($numero, $numeroQueBuscar) {
+    private function contieneNumero($numero, $numeroQueBuscar) {
         $numero2 = '' . $numero;
 
         return strpos($numero2, $numeroQueBuscar) !== false;
     }
 
-    public function esMultiple($numero, $decualEsMultiple) {
+    private function esMultiple($numero, $decualEsMultiple) {
         $resultado = $numero % $decualEsMultiple;
         return $resultado == 0;
     }
