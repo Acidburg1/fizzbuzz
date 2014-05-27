@@ -18,11 +18,11 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase {
     }
 
     public function testElPrimerElementoEs1() {
-        $this->assertEquals(1, $this->fizzBuzz->devuelve(1));
+        $this->assertEquals('1', $this->fizzBuzz->devuelve(1));
     }
 
     public function testElSegundoElementoEs2() {
-        $this->assertEquals(2, $this->fizzBuzz->devuelve(2));
+        $this->assertEquals('2', $this->fizzBuzz->devuelve(2));
     }
 
     public function testElTercerElementoEsFizz() {
@@ -35,6 +35,10 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase {
 
     public function testElQuinceaboElementoEsFizz() {
         $this->assertEquals('FizzBuzz', $this->fizzBuzz->devuelve(15));
+    }
+
+    public function testElTrintaiUnoElementoEsFizz() {
+        $this->assertEquals('Fizz', $this->fizzBuzz->devuelve(31));
     }
 
 }
